@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: qrstovykla-api:latest
+    container_name: qrstovykla-api
+
+    restart: unless-stopped
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      Access__Password: "${ACCESS_PASSWORD}"
+      Access__DriveUrl: "${DRIVE_URL}"
+
+    ports:
+      - "8080:8080"

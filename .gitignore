@@ -445,3 +445,4 @@ FodyWeavers.xsd
 
 .env
 .env.*
+*.tar

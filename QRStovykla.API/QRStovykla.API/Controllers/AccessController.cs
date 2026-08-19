@@ -29,7 +29,7 @@ namespace QRStovykla.API.Controllers
 
             return Ok(new
             {
-                redirectUrl = "http://localhost:5000/api/access/open"
+                redirectUrl = $"{Request.Scheme}://{Request.Host}/api/access/open"
             });
         }
         [HttpGet("open")]
