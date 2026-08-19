@@ -12,7 +12,7 @@ export default function Home() {
     setError("");
 
     try {
-      const response = await fetch("/.netlify/functions/access", {
+      const response = await fetch("https://api-stovykla.midi.lt/api/access", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
